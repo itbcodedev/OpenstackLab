@@ -1,8 +1,8 @@
 # Devstack post script
 #   sawangpong muadphet <sawangpong@itbakery.net>
-#   version 0.2    11 April 2020
+#   version 0.5    04 June 2020
 #   Customize devstack local.conf 
-# update & install dependency
+#   update & install dependency
 
 sudo yum update -y
 sudo yum upgrade -y
@@ -60,7 +60,6 @@ sudo su - stack -c 'git clone https://git.openstack.org/openstack-dev/devstack'
 #create local.conf
 sudo su - stack -c "
 echo '
-
 [[local|localrc]]
 ADMIN_PASSWORD=secrete
 DATABASE_PASSWORD=\$ADMIN_PASSWORD
@@ -68,11 +67,16 @@ RABBIT_PASSWORD=\$ADMIN_PASSWORD
 SERVICE_PASSWORD=\$ADMIN_PASSWORD
 SKIP_PATH_SANITY=1
 GIT_BASE=\${GIT_BASE:-https://opendev.org}
-HOST_IP=$ip_address
+HOST_IP=192.168.50.10
+
+# Useable Host Ip Range 192.168.50.225 - 192.168.50.254
+FLOATING_RANGE=192.168.50.224/27
+FLAT_INTERFACE=eth1
 RECLONE=yes
 FORCE=yes
 USE_PYTHON3=True
 PYTHON_VERSION=3.6
+#OFFLINE=True
 
 
 # Enable neutron

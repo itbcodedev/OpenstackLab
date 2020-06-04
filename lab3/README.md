@@ -35,7 +35,7 @@ sudo iptable -F
 - Exit to host machine
 
 ```
-vagrant snapshot save devstack3 lab3
+vagrant snapshot save  lab3
 ```
 
 
@@ -45,22 +45,34 @@ vagrant snapshot restore lab3
 
 ### Referece Using save:
 
-```
-vagrant snapshot save [vm-name] NAME
-```
-
-Saves a new snapshot with the names of your VM and your snapshot.
-
-Using restore:
+- List Snapshots
 
 ```
-vagrant snapshot restore [vm-name] NAME
+vagrant snapshot list
 ```
 
-Restores the named snapshot.
-
-Options:
+- Create a Snapshot
 
 ```
---[no-]provision – forces the provisioners to run (or prevent them from doing so).
+vagrant snapshot save SNAPSHOTNAME
+```
+
+```
+vagrant snapshot save snapshot01
+```
+
+- Restore a Snapshot
+
+```
+vagrant snapshot restore SNAPSHOTNAME
+```
+
+```
+vagrant snapshot restore snapshot01
+```
+
+- Delete a Snapshot
+
+```
+vagrant snapshot delete SNAPSHOTNAME
 ```

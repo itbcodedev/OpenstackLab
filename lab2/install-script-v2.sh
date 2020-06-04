@@ -1,8 +1,8 @@
 # Devstack post script
 #   sawangpong muadphet <sawangpong@itbakery.net>
-#   version 0.2    11 April 2020
+#   version version 0.5    04 June 2020
 #   minimum devstack local.conf
-# update & install dependency
+#   update & install dependency
 
 sudo yum update -y
 sudo yum upgrade -y
