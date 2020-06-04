@@ -12,8 +12,9 @@ sudo su - stack
 ./stack.sh
 ```
 
-### Success result
+### Result success build
 
+![success](./images/success.png)
 
 
 ### Flush iptables
@@ -32,12 +33,23 @@ sudo iptables -F
 - Exit to host machine
 
 ```
-vagrant snapshot save  lab3
+vagrant snapshot save  lab2
+
+==> devstack2: Snapshotting the machine as 'lab2'...
+==> devstack2: Snapshot saved! You can restore the snapshot at any time by
+==> devstack2: using `vagrant snapshot restore`. You can delete it using
+==> devstack2: `vagrant snapshot delete`.
+```
+
+```
+vagrant snapshot list     
+==> devstack2: 
+lab2
 ```
 
 
 ```
-vagrant snapshot restore lab3 
+vagrant snapshot restore lab2
 ```
 
 ### Referece Using save:
