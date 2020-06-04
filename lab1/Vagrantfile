@@ -1,0 +1,17 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  config.vm.provider "virtualbox" do |vb|
+     vb.cpus = 2
+     vb.memory = "2048"
+  end
+  config.vm.provision "shell", inline: <<-SHELL
+     yum update -y
+     yum install httpd -y
+  SHELL
+end
