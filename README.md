@@ -5,7 +5,7 @@
 Lab separate into 4 part
 
 | Lab  | Objective                                                     |
-|------|-------------------------------------------------------------------|
+
 | Lab1 | Basic introduction to Vagrant                                     |
 | Lab2 | All in one on single interface eth0 (nat)                         |
 | Lab3 | Add neutron to second interface eth1 (hostonly)                   |
