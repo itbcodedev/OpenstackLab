@@ -209,3 +209,8 @@ open browser and go to url
 ![image](./images/vnc.png)
 
 login with user   'cirros'  with password  'gocubsgo'
+
+
+Visit web  with admin section 
+
+![image](./images/dashboardadmin.png)
