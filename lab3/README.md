@@ -194,7 +194,7 @@ wait vm create and run follow command to check
 openstack server list
 ```
 
-![image](./images/server-list.png)
+![image](./images/serverlist.png)
 
 - get openstack vnc show url
 
