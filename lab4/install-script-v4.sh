@@ -76,6 +76,8 @@ RECLONE=yes
 FORCE=yes
 USE_PYTHON3=True
 PYTHON_VERSION=3.6
+
+
 #OFFLINE=True
 
 
@@ -107,13 +109,7 @@ enable_service h-api-cw
 
 
 
-## Neutron options
-Q_USE_SECGROUP=True
-FLOATING_RANGE="10.0.2.0/24"
-IPV4_ADDRS_SAFE_TO_USE="10.0.2.0/22"
-Q_FLOATING_ALLOCATION_POOL=start=10.0.2.250,end=10.0.2.254
-PUBLIC_NETWORK_GATEWAY="10.0.2.2"
-PUBLIC_INTERFACE=eth0
+
 
 ## Open vSwitch provider networking configuration
 Q_USE_PROVIDERNET_FOR_PUBLIC=True
