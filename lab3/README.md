@@ -206,6 +206,6 @@ openstack console url show  cirros-vm
 
 open browser and go to url
 
-![image](./images/vncs.png)
+![image](./images/vnc.png)
 
 login with user   'cirros'  with password  'gocubsgo'
