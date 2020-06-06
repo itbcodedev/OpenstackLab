@@ -87,13 +87,25 @@ new vm in openstack
 ```
 sudo vgs
 
+  VG                        #PV #LV #SN Attr   VSize   VFree
+  stack-volumes-default       1   0   0 wz--n- <24.00g <24.00g
+  stack-volumes-lvmdriver-1   1   1   0 wz--n- <24.00g  <1.15g
+```
+
+```
 sudo lvs
+  LV                             VG                        Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  stack-volumes-lvmdriver-1-pool stack-volumes-lvmdriver-1 twi-a-tz-- 22.80g             0.00   10.50
+
 ```
 
 by default, Linux use create loop devices to support those volues
 
 ```
 sudo losetup -l
+  LV                             VG                        Attr       LSize  Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  stack-volumes-lvmdriver-1-pool stack-volumes-lvmdriver-1 twi-a-tz-- 22.80g             0.00   10.50
+s
 ```
 
 > loop back device will recreate on system boot. recomment to create snapshot the vm during running vm.
